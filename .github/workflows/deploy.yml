@@ -5,8 +5,6 @@ on:
   # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [ main ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
 permissions:
@@ -25,7 +23,7 @@ jobs:
       - with:
           path: . # The root location of your Astro project inside the repository. (optional)
           node-version: 18
-          package-manager: yarn@latest 
+          package-manager: yarn@latest
 
   deploy:
     needs: build
